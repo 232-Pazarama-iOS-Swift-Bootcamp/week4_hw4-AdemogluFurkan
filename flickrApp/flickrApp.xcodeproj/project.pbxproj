@@ -56,15 +56,31 @@
 		E2D9D01128F72B5C004320CF /* flickrApp */ = {
 			isa = PBXGroup;
 			children = (
+				E2D9D02728F72CF5004320CF /* Screens */,
+				E2D9D02628F72CDC004320CF /* App */,
+			);
+			path = flickrApp;
+			sourceTree = "<group>";
+		};
+		E2D9D02628F72CDC004320CF /* App */ = {
+			isa = PBXGroup;
+			children = (
 				E2D9D01228F72B5C004320CF /* AppDelegate.swift */,
 				E2D9D01428F72B5C004320CF /* SceneDelegate.swift */,
-				E2D9D01628F72B5C004320CF /* ViewController.swift */,
-				E2D9D01828F72B5C004320CF /* Main.storyboard */,
 				E2D9D01B28F72B5E004320CF /* Assets.xcassets */,
 				E2D9D01D28F72B5E004320CF /* LaunchScreen.storyboard */,
 				E2D9D02028F72B5E004320CF /* Info.plist */,
 			);
-			path = flickrApp;
+			path = App;
+			sourceTree = "<group>";
+		};
+		E2D9D02728F72CF5004320CF /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				E2D9D01628F72B5C004320CF /* ViewController.swift */,
+				E2D9D01828F72B5C004320CF /* Main.storyboard */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,7 +304,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = flickrApp/Info.plist;
+				INFOPLIST_FILE = flickrApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -315,7 +331,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = flickrApp/Info.plist;
+				INFOPLIST_FILE = flickrApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
