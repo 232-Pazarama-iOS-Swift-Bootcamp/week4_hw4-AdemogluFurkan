@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 final class PhotoListViewController: UIViewController {
     
@@ -27,7 +28,9 @@ final class PhotoListViewController: UIViewController {
         super.viewDidLoad()
         
         viewModel.fetchPhotos()
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
+        let nib = UINib(nibName: "PhotoTableViewCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "photocell")
 
         viewModel.changeHandler = { change in
             switch change{
@@ -51,8 +54,11 @@ extension PhotoListViewController:UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = viewModel.photoForIndexPath(indexPath)?.title
+        let cell = tableView.dequeueReusableCell(withIdentifier: "photocell", for: indexPath) as! PhotoTableViewCell
+        let photo = viewModel.photoForIndexPath(indexPath)
+        cell.title = photo?.title
+        let photoUrl = "https://live.staticflickr.com/\(photo?.server)/\(photo?.id)_\(photo?.secret).jpg"
+        cell.photoImageView?.kf.setImage(with: URL(string: photoUrl))
         return cell
     }
 }

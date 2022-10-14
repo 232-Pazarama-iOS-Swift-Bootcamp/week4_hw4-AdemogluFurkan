@@ -8,5 +8,6 @@ target 'flickrApp' do
   # Pods for flickrApp
   pod 'Moya'
   pod 'SnapKit'
+  pod 'Kingfisher'
 
 end
