@@ -19,7 +19,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         let window = UIWindow(windowScene: windowScene)
-        let viewController = PhotoListViewController(viewModel: PhotoListViewModel())
+        //let viewController = PhotoListViewController(viewModel: PhotoListViewModel())
+        let viewController = AuthViewController(viewModel: AuthViewModel())
         let navigationController = UINavigationController(rootViewController: viewController)
         window.rootViewController=navigationController
         window.makeKeyAndVisible()

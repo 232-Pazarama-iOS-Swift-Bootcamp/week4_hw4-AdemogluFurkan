@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		56B086A2BBD9558709121BF4 /* Pods_flickrApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3516515F91050B4F74292495 /* Pods_flickrApp.framework */; };
+		E237AA9A28FACD6B000D5859 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E237AA9928FACD6B000D5859 /* AuthViewModel.swift */; };
+		E237AA9D28FAD0F9000D5859 /* AlertPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E237AA9C28FAD0F9000D5859 /* AlertPresentable.swift */; };
+		E237AAA028FAD151000D5859 /* CAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E237AA9F28FAD151000D5859 /* CAViewController.swift */; };
 		E24352C028F8761C00AF384B /* FlickrApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24352BF28F8761C00AF384B /* FlickrApi.swift */; };
 		E24352C328F893EB00AF384B /* PhotoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24352C228F893EB00AF384B /* PhotoListViewModel.swift */; };
 		E274039D28F980EE003520D1 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E274039C28F980EE003520D1 /* Photo.swift */; };
@@ -21,11 +24,22 @@
 		E2D9D01528F72B5C004320CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D9D01428F72B5C004320CF /* SceneDelegate.swift */; };
 		E2D9D01C28F72B5E004320CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2D9D01B28F72B5E004320CF /* Assets.xcassets */; };
 		E2D9D01F28F72B5E004320CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2D9D01D28F72B5E004320CF /* LaunchScreen.storyboard */; };
+		E2E830ED28FAACC800ABB346 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E830EB28FAACC800ABB346 /* AuthViewController.swift */; };
+		E2E830EE28FAACC800ABB346 /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2E830EC28FAACC800ABB346 /* AuthViewController.xib */; };
+		E2E830F228FAAEE400ABB346 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2E830F128FAAEE400ABB346 /* GoogleService-Info.plist */; };
+		E2E830F528FAB1E700ABB346 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = E2E830F428FAB1E700ABB346 /* FirebaseAuth */; };
+		E2E830F728FAB1E700ABB346 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E2E830F628FAB1E700ABB346 /* FirebaseDatabaseSwift */; };
+		E2E830F928FAB1E700ABB346 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E2E830F828FAB1E700ABB346 /* FirebaseFirestoreSwift */; };
+		E2E830FB28FAB1E700ABB346 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E2E830FA28FAB1E700ABB346 /* FirebaseRemoteConfigSwift */; };
+		E2E830FD28FAB1E700ABB346 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = E2E830FC28FAB1E700ABB346 /* FirebaseStorage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3516515F91050B4F74292495 /* Pods_flickrApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_flickrApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E24842104DB2E56E213A620 /* Pods-flickrApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flickrApp.debug.xcconfig"; path = "Target Support Files/Pods-flickrApp/Pods-flickrApp.debug.xcconfig"; sourceTree = "<group>"; };
+		E237AA9928FACD6B000D5859 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		E237AA9C28FAD0F9000D5859 /* AlertPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresentable.swift; sourceTree = "<group>"; };
+		E237AA9F28FAD151000D5859 /* CAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAViewController.swift; sourceTree = "<group>"; };
 		E24352BF28F8761C00AF384B /* FlickrApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrApi.swift; sourceTree = "<group>"; };
 		E24352C228F893EB00AF384B /* PhotoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListViewModel.swift; sourceTree = "<group>"; };
 		E274039C28F980EE003520D1 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
@@ -41,6 +55,9 @@
 		E2D9D01B28F72B5E004320CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2D9D01E28F72B5E004320CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E2D9D02028F72B5E004320CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2E830EB28FAACC800ABB346 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		E2E830EC28FAACC800ABB346 /* AuthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthViewController.xib; sourceTree = "<group>"; };
+		E2E830F128FAAEE400ABB346 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E88312B4E230F597EDD2F5AE /* Pods-flickrApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flickrApp.release.xcconfig"; path = "Target Support Files/Pods-flickrApp/Pods-flickrApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -49,7 +66,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2E830F728FAB1E700ABB346 /* FirebaseDatabaseSwift in Frameworks */,
 				56B086A2BBD9558709121BF4 /* Pods_flickrApp.framework in Frameworks */,
+				E2E830FB28FAB1E700ABB346 /* FirebaseRemoteConfigSwift in Frameworks */,
+				E2E830F528FAB1E700ABB346 /* FirebaseAuth in Frameworks */,
+				E2E830F928FAB1E700ABB346 /* FirebaseFirestoreSwift in Frameworks */,
+				E2E830FD28FAB1E700ABB346 /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +84,30 @@
 				3516515F91050B4F74292495 /* Pods_flickrApp.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E237AA9828FACBD4000D5859 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E237AA9928FACD6B000D5859 /* AuthViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E237AA9B28FAD0E6000D5859 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E237AA9C28FAD0F9000D5859 /* AlertPresentable.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E237AA9E28FAD140000D5859 /* CAKit */ = {
+			isa = PBXGroup;
+			children = (
+				E237AA9F28FAD151000D5859 /* CAViewController.swift */,
+			);
+			path = CAKit;
 			sourceTree = "<group>";
 		};
 		E24352B928F86E1B00AF384B /* Delegate */ = {
@@ -84,6 +130,8 @@
 		E24352BB28F86E2C00AF384B /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				E237AA9E28FAD140000D5859 /* CAKit */,
+				E237AA9B28FAD0E6000D5859 /* Helpers */,
 				E24352BE28F8761000AF384B /* Network */,
 			);
 			path = Core;
@@ -92,6 +140,7 @@
 		E24352BC28F86E3400AF384B /* Plist */ = {
 			isa = PBXGroup;
 			children = (
+				E2E830F128FAAEE400ABB346 /* GoogleService-Info.plist */,
 				E2D9D02028F72B5E004320CF /* Info.plist */,
 			);
 			path = Plist;
@@ -138,6 +187,13 @@
 				E27403A528F9A515003520D1 /* PhotoTableViewCell.xib */,
 			);
 			path = PhotoTableViewCell;
+			sourceTree = "<group>";
+		};
+		E27403A728F9DED3003520D1 /* PhotoDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PhotoDetail;
 			sourceTree = "<group>";
 		};
 		E297EA0B28F83A9700CAA90E /* PhotoList */ = {
@@ -210,9 +266,37 @@
 		E2D9D02728F72CF5004320CF /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				E2E830EA28FAAC9600ABB346 /* Auth */,
+				E27403A728F9DED3003520D1 /* PhotoDetail */,
 				E297EA0B28F83A9700CAA90E /* PhotoList */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		E2E830EA28FAAC9600ABB346 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				E237AA9828FACBD4000D5859 /* ViewModel */,
+				E2E830F028FAACDD00ABB346 /* View */,
+				E2E830EF28FAACD600ABB346 /* Controller */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		E2E830EF28FAACD600ABB346 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E2E830EB28FAACC800ABB346 /* AuthViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E2E830F028FAACDD00ABB346 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E2E830EC28FAACC800ABB346 /* AuthViewController.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		EEEFE5468C8A8B7D003FC5F3 /* Pods */ = {
@@ -242,6 +326,13 @@
 			dependencies = (
 			);
 			name = flickrApp;
+			packageProductDependencies = (
+				E2E830F428FAB1E700ABB346 /* FirebaseAuth */,
+				E2E830F628FAB1E700ABB346 /* FirebaseDatabaseSwift */,
+				E2E830F828FAB1E700ABB346 /* FirebaseFirestoreSwift */,
+				E2E830FA28FAB1E700ABB346 /* FirebaseRemoteConfigSwift */,
+				E2E830FC28FAB1E700ABB346 /* FirebaseStorage */,
+			);
 			productName = flickrApp;
 			productReference = E2D9D00F28F72B5C004320CF /* flickrApp.app */;
 			productType = "com.apple.product-type.application";
@@ -270,6 +361,9 @@
 				Base,
 			);
 			mainGroup = E2D9D00628F72B5C004320CF;
+			packageReferences = (
+				E2E830F328FAB1E700ABB346 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = E2D9D01028F72B5C004320CF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -286,8 +380,10 @@
 			files = (
 				E27403A628F9A515003520D1 /* PhotoTableViewCell.xib in Resources */,
 				E2D9D01F28F72B5E004320CF /* LaunchScreen.storyboard in Resources */,
+				E2E830EE28FAACC800ABB346 /* AuthViewController.xib in Resources */,
 				E297EA0F28F83AC900CAA90E /* PhotoListViewController.xib in Resources */,
 				E2D9D01C28F72B5E004320CF /* Assets.xcassets in Resources */,
+				E2E830F228FAAEE400ABB346 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,12 +438,16 @@
 			files = (
 				E274039D28F980EE003520D1 /* Photo.swift in Sources */,
 				E2D9D01328F72B5C004320CF /* AppDelegate.swift in Sources */,
+				E2E830ED28FAACC800ABB346 /* AuthViewController.swift in Sources */,
 				E274039F28F98156003520D1 /* PhotoResponse.swift in Sources */,
 				E2D9D01528F72B5C004320CF /* SceneDelegate.swift in Sources */,
 				E27403A128F9821E003520D1 /* Photos.swift in Sources */,
 				E27403A428F9A4C8003520D1 /* PhotoTableViewCell.swift in Sources */,
+				E237AA9A28FACD6B000D5859 /* AuthViewModel.swift in Sources */,
+				E237AAA028FAD151000D5859 /* CAViewController.swift in Sources */,
 				E297EA0E28F83AC900CAA90E /* PhotoListViewController.swift in Sources */,
 				E24352C328F893EB00AF384B /* PhotoListViewModel.swift in Sources */,
+				E237AA9D28FAD0F9000D5859 /* AlertPresentable.swift in Sources */,
 				E24352C028F8761C00AF384B /* FlickrApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -558,6 +658,45 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E2E830F328FAB1E700ABB346 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E2E830F428FAB1E700ABB346 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E2E830F328FAB1E700ABB346 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		E2E830F628FAB1E700ABB346 /* FirebaseDatabaseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E2E830F328FAB1E700ABB346 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabaseSwift;
+		};
+		E2E830F828FAB1E700ABB346 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E2E830F328FAB1E700ABB346 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		E2E830FA28FAB1E700ABB346 /* FirebaseRemoteConfigSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E2E830F328FAB1E700ABB346 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfigSwift;
+		};
+		E2E830FC28FAB1E700ABB346 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E2E830F328FAB1E700ABB346 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E2D9D00728F72B5C004320CF /* Project object */;
 }

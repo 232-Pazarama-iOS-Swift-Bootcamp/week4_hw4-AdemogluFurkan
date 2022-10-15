@@ -13,7 +13,7 @@ enum FlickrAPI{
 
 extension FlickrAPI:TargetType{
     var baseURL: URL {
-        guard let url = URL(string: "https://www.flickr.com/services/rest/?method=flickr.photos.getRecent&api_key=9128c0d9e082273d12fea94f3be3197f&format=json&nojsoncallback=1&auth_token=72157720860685388-721ebc586d710c26&api_sig=7b2e0d394fd0bf9d2d914e93c8772a9f") else{
+        guard let url = URL(string: "https://www.flickr.com/services/rest/?method=flickr.photos.getRecent&api_key=bd22827f865f91809f563c04557356cd&format=json&nojsoncallback=1&auth_token=72157720860775600-6007be594f0b3ab3&api_sig=7db4789b40c307679661b931988edb6f") else{
             fatalError("Base URL not found or not in correct format.")
         }
         return url
