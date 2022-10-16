@@ -96,9 +96,9 @@ final class AuthViewController: CAViewController {
                         let photoListViewModel = PhotoListViewModel()
                         let cryptoListViewController = PhotoListViewController(viewModel: photoListViewModel)
                         
-                        let tabBarController = UITabBarController()
-                        tabBarController.viewControllers = [cryptoListViewController]
-                        self.navigationController?.pushViewController(tabBarController, animated: true)
+                        let tabBarController = MainTabbarViewController()
+                      //  tabBarController.viewControllers = [cryptoListViewController]
+                       self.navigationController?.pushViewController(tabBarController, animated: true)
                     })
                 case .signUp:
                     viewModel.signUp(email: credential,

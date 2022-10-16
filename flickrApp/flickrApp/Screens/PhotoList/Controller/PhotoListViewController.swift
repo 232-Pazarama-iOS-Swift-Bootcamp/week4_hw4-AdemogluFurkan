@@ -57,8 +57,10 @@ extension PhotoListViewController:UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "photocell", for: indexPath) as! PhotoTableViewCell
         let photo = viewModel.photoForIndexPath(indexPath)
         cell.title = photo?.title
-        let photoUrl = "https://live.staticflickr.com/\(photo?.server)/\(photo?.id)_\(photo?.secret).jpg"
-        cell.photoImageView?.kf.setImage(with: URL(string: photoUrl))
+        if let unwarrapedPhoto = photo{
+            let photoUrl = "https://live.staticflickr.com/\(unwarrapedPhoto.server)/\(unwarrapedPhoto.id)_\(unwarrapedPhoto.secret).jpg"
+            cell.photoImageView.kf.setImage(with: URL(string: photoUrl))
+        }
         return cell
     }
 }

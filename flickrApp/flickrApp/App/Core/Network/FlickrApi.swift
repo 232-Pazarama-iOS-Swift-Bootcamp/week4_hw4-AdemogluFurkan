@@ -9,11 +9,12 @@ import Moya
 
 enum FlickrAPI{
     case recentPhotos
+    case searchPhoto(text:String)
 }
 
 extension FlickrAPI:TargetType{
     var baseURL: URL {
-        guard let url = URL(string: "https://www.flickr.com/services/rest/?method=flickr.photos.getRecent&api_key=bd22827f865f91809f563c04557356cd&format=json&nojsoncallback=1&auth_token=72157720860775600-6007be594f0b3ab3&api_sig=7db4789b40c307679661b931988edb6f") else{
+        guard let url = URL(string: "https://www.flickr.com/services/rest") else{
             fatalError("Base URL not found or not in correct format.")
         }
         return url
@@ -22,6 +23,8 @@ extension FlickrAPI:TargetType{
     var path: String {
         switch self{
         case .recentPhotos:
+            return ""
+        case .searchPhoto:
             return ""
         }
     }
@@ -33,11 +36,20 @@ extension FlickrAPI:TargetType{
     var task: Task {
         switch self{
         case .recentPhotos:
-           /* let parameters = ["method":"flickr.photos.getRecent",
-                              "api_key":"f36ac47a11d74c27888a43d0fe485b76"
-            ]*/
-            //return .requestParameters(parameters: parameters, encoding: URLEncoding.queryString)
-            return .requestPlain
+            let parameters: [String:Any] = ["method":"flickr.photos.getRecent",
+                                            "api_key":"3251950b2f84f909042bcf2c93c9d216",
+                                            "format":"json",
+                                            "nojsoncallback":1
+            ]
+            return .requestParameters(parameters: parameters, encoding: URLEncoding.queryString)
+        case .searchPhoto(let text):
+            let parameters: [String:Any]=["method":"flickr.photos.search",
+                                          "api_key":"3251950b2f84f909042bcf2c93c9d216",
+                                          "text" : text,
+                                          "format":"json",
+                                          "nojsoncallback":1
+          ]
+            return .requestParameters(parameters: parameters, encoding: URLEncoding.queryString)
         }
     }
     
