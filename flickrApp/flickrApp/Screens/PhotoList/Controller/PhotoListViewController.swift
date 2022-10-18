@@ -31,7 +31,7 @@ final class PhotoListViewController: UIViewController {
         
         let nib = UINib(nibName: "PhotoTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "photocell")
-
+        tabBarController?.navigationItem.hidesBackButton = true
         viewModel.changeHandler = { change in
             switch change{
             case .didFetchPhotos:
@@ -42,6 +42,7 @@ final class PhotoListViewController: UIViewController {
             
         }
     }
+    
 }
 
 extension PhotoListViewController:UITableViewDelegate{
@@ -61,6 +62,11 @@ extension PhotoListViewController:UITableViewDataSource{
             let photoUrl = "https://live.staticflickr.com/\(unwarrapedPhoto.server)/\(unwarrapedPhoto.id)_\(unwarrapedPhoto.secret).jpg"
             cell.photoImageView.kf.setImage(with: URL(string: photoUrl))
         }
+        cell.addFavoriteBtn = {[unowned self] in
+            viewModel.addFavorite(photo: photo)
+            
+        }
         return cell
     }
 }
+

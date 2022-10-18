@@ -35,13 +35,25 @@
                             <constraint firstItem="uva-7Q-5Bx" firstAttribute="top" secondItem="p8F-sv-lKK" secondAttribute="top" id="tQZ-v4-rpN"/>
                         </constraints>
                     </stackView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S9n-1d-Z31">
+                        <rect key="frame" x="0.0" y="227.5" width="112" height="57.5"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="Add Favorites"/>
+                        <connections>
+                            <action selector="favoriteButtonTapped:" destination="SPm-bh-jI7" eventType="touchUpInside" id="eai-c7-eQG"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="p8F-sv-lKK" firstAttribute="top" secondItem="b4m-b3-1om" secondAttribute="top" id="CAT-2n-Y6G"/>
+                    <constraint firstItem="S9n-1d-Z31" firstAttribute="leading" secondItem="b4m-b3-1om" secondAttribute="leading" id="K48-P4-n2Z"/>
                     <constraint firstAttribute="bottom" secondItem="p8F-sv-lKK" secondAttribute="bottom" constant="101.5" id="L3P-hW-G74"/>
+                    <constraint firstAttribute="bottom" secondItem="S9n-1d-Z31" secondAttribute="bottom" constant="32" id="USG-Q4-Hhq"/>
+                    <constraint firstItem="S9n-1d-Z31" firstAttribute="top" secondItem="p8F-sv-lKK" secondAttribute="bottom" constant="12" id="mV0-HZ-bwE"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="addFavorite" destination="S9n-1d-Z31" id="0SG-aR-OnP"/>
                 <outlet property="photoImageView" destination="uva-7Q-5Bx" id="cmq-Mh-cu1"/>
                 <outlet property="titleLabel" destination="YqT-XZ-qEg" id="OTa-sk-Ap9"/>
             </connections>

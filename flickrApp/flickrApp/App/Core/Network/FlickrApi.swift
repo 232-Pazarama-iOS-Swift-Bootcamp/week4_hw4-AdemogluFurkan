@@ -37,14 +37,14 @@ extension FlickrAPI:TargetType{
         switch self{
         case .recentPhotos:
             let parameters: [String:Any] = ["method":"flickr.photos.getRecent",
-                                            "api_key":"3251950b2f84f909042bcf2c93c9d216",
+                                            "api_key":"ec237dde6d4e93992b5b8ec63d23291c",
                                             "format":"json",
                                             "nojsoncallback":1
             ]
             return .requestParameters(parameters: parameters, encoding: URLEncoding.queryString)
         case .searchPhoto(let text):
             let parameters: [String:Any]=["method":"flickr.photos.search",
-                                          "api_key":"3251950b2f84f909042bcf2c93c9d216",
+                                          "api_key":"ec237dde6d4e93992b5b8ec63d23291c",
                                           "text" : text,
                                           "format":"json",
                                           "nojsoncallback":1

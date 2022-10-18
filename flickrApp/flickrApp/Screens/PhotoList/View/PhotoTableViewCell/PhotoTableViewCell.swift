@@ -18,9 +18,12 @@ class PhotoTableViewCell: UITableViewCell {
         }
     }
     
+    var addFavoriteBtn : (() -> ())?
+    
     @IBOutlet private(set) weak var photoImageView:UIImageView!
     @IBOutlet private weak var titleLabel:UILabel!
 
+    @IBOutlet weak var addFavorite: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -30,6 +33,10 @@ class PhotoTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    @IBAction func favoriteButtonTapped(_ sender:Any){
+        addFavoriteBtn!()
     }
 
 }

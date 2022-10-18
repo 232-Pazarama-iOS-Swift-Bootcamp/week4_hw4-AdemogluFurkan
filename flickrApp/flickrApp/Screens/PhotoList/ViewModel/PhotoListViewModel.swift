@@ -7,6 +7,13 @@
 
 import Foundation
 import Moya
+import FirebaseFirestore
+
+
+@objc
+protocol PhotoListDelegate: AnyObject{
+    @objc optional func didCoinAddedToFavorites()
+}
 
 enum PhotoListChanges{
     case didErrorOccured(_ error:Error)
@@ -14,6 +21,10 @@ enum PhotoListChanges{
 }
 
 final class PhotoListViewModel{
+    weak var delegate:PhotoListDelegate?
+    
+    private let db = Firestore.firestore()
+    private let defaults = UserDefaults.standard
     private let provider = MoyaProvider<FlickrAPI>()
     
     var changeHandler: ((PhotoListChanges) -> Void)?
@@ -36,6 +47,7 @@ final class PhotoListViewModel{
                 do{
                     let photosResponse = try? JSONDecoder().decode(PhotoResponse.self, from: response.data)
                     self.photosResponse = photosResponse
+                    self.addImagesToFirebaseFirestore(photosResponse?.photos?.photo)
                     self.changeHandler?(.didFetchPhotos)
                 } catch{
                     self.changeHandler?(.didErrorOccured(error))
@@ -47,5 +59,41 @@ final class PhotoListViewModel{
     func photoForIndexPath(_ indexPath:IndexPath) -> Photo?{
         photosResponse?.photos?.photo?[indexPath.row]
     }
+    
+    func addFavorite(photo:Photo?) {
+          guard let id = photo?.id,
+                let uid = defaults.string(forKey: UserDefaultConstants.uid.rawValue) else {
+              return
+          }
+          
+          db.collection("users").document(uid).updateData([
+              "favorites": FieldValue.arrayUnion([id])
+          ])
+          
+          delegate?.didCoinAddedToFavorites?()
+      }
+    
+    private func addImagesToFirebaseFirestore(_ photos: [Photo]?) {
+            guard let photos = photos else {
+                return
+            }
+            photos.forEach { photo in
+                do {
+                    guard let data = try photo.dictionary else {
+                        return
+                    }
+                    let id = photo.id
+                    db.collection("photos").document(id).setData(data) { error in
+                        
+                        if let error = error {
+                            self.changeHandler?(.didErrorOccured(error))
+                        }
+                    }
+                } catch {
+                    self.changeHandler?(.didErrorOccured(error))
+                }
+            }
+        }
+        
     
 }

@@ -65,16 +65,6 @@ final class AuthViewController: CAViewController {
                        self.showAlert(title: "SIGN UP SUCCESSFUL!")
                    }
                }
-               /*
-               flickrApiProvider.request(.getRecentPhotos) { result in
-                   switch result {
-                   case .failure(let error):
-                       print(error.localizedDescription)
-                   case .success(let response):
-                       print(String(decoding: response.data, as: UTF8.self))
-                   }
-               }
-               */
                title = "Auth"
                
                viewModel.fetchRemoteConfig { isSignUpDisabled in

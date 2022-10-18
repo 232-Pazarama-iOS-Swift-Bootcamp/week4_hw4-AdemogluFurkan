@@ -15,7 +15,8 @@ class MainTabbarViewController: UITabBarController {
         let vc1 = UINavigationController(rootViewController: PhotoListViewController(viewModel: PhotoListViewModel()))
         let vc2 = UINavigationController(rootViewController: SearchViewController(viewModel: SearchViewModel()))
                        
-             //  vc1.tabBarItem.image = UIImage(systemName: "ipod")
+        vc1.tabBarItem.image = UIImage(named: "home")
+        vc2.tabBarItem.image = UIImage(named: "search")
 
                
         vc1.title = "Home"
