@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		56B086A2BBD9558709121BF4 /* Pods_flickrApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3516515F91050B4F74292495 /* Pods_flickrApp.framework */; };
+		E22B25D328FE90E70082FC79 /* CAViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22B25D228FE90E70082FC79 /* CAViewModel.swift */; };
+		E22B25D528FE95000082FC79 /* FirebaseFirestoreExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22B25D428FE95000082FC79 /* FirebaseFirestoreExtension.swift */; };
+		E22B25D728FE95250082FC79 /* UserDefaultAccessible.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22B25D628FE95250082FC79 /* UserDefaultAccessible.swift */; };
+		E22B25DD28FEB55C0082FC79 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22B25DB28FEB55C0082FC79 /* AccountViewController.swift */; };
+		E22B25DE28FEB55C0082FC79 /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E22B25DC28FEB55C0082FC79 /* AccountViewController.xib */; };
+		E22B25E028FEB96A0082FC79 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22B25DF28FEB96A0082FC79 /* AccountViewModel.swift */; };
 		E237AA9A28FACD6B000D5859 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E237AA9928FACD6B000D5859 /* AuthViewModel.swift */; };
 		E237AA9D28FAD0F9000D5859 /* AlertPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E237AA9C28FAD0F9000D5859 /* AlertPresentable.swift */; };
 		E237AAA028FAD151000D5859 /* CAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E237AA9F28FAD151000D5859 /* CAViewController.swift */; };
@@ -46,6 +52,12 @@
 /* Begin PBXFileReference section */
 		3516515F91050B4F74292495 /* Pods_flickrApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_flickrApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E24842104DB2E56E213A620 /* Pods-flickrApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flickrApp.debug.xcconfig"; path = "Target Support Files/Pods-flickrApp/Pods-flickrApp.debug.xcconfig"; sourceTree = "<group>"; };
+		E22B25D228FE90E70082FC79 /* CAViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAViewModel.swift; sourceTree = "<group>"; };
+		E22B25D428FE95000082FC79 /* FirebaseFirestoreExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseFirestoreExtension.swift; sourceTree = "<group>"; };
+		E22B25D628FE95250082FC79 /* UserDefaultAccessible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultAccessible.swift; sourceTree = "<group>"; };
+		E22B25DB28FEB55C0082FC79 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		E22B25DC28FEB55C0082FC79 /* AccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountViewController.xib; sourceTree = "<group>"; };
+		E22B25DF28FEB96A0082FC79 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 		E237AA9928FACD6B000D5859 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		E237AA9C28FAD0F9000D5859 /* AlertPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresentable.swift; sourceTree = "<group>"; };
 		E237AA9F28FAD151000D5859 /* CAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +116,40 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E22B25D128FE90830082FC79 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				E22B25DA28FEB4DC0082FC79 /* Controller */,
+				E22B25D928FEB4D10082FC79 /* ViewModel */,
+				E22B25D828FEB4CC0082FC79 /* View */,
+				E22B25DB28FEB55C0082FC79 /* AccountViewController.swift */,
+				E22B25DC28FEB55C0082FC79 /* AccountViewController.xib */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		E22B25D828FEB4CC0082FC79 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E22B25D928FEB4D10082FC79 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E22B25DF28FEB96A0082FC79 /* AccountViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E22B25DA28FEB4DC0082FC79 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		E237AA9828FACBD4000D5859 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				E237AA9F28FAD151000D5859 /* CAViewController.swift */,
+				E22B25D228FE90E70082FC79 /* CAViewModel.swift */,
 			);
 			path = CAKit;
 			sourceTree = "<group>";
@@ -296,6 +343,8 @@
 			isa = PBXGroup;
 			children = (
 				E28D000928FDA7CE008564F6 /* Encodable+Extension.swift */,
+				E22B25D428FE95000082FC79 /* FirebaseFirestoreExtension.swift */,
+				E22B25D628FE95250082FC79 /* UserDefaultAccessible.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -378,6 +427,7 @@
 		E2D9D02728F72CF5004320CF /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				E22B25D128FE90830082FC79 /* Account */,
 				E251338E28FAFDEF001AD16F /* Search */,
 				E251338A28FAF5E1001AD16F /* TabBar */,
 				E2E830EA28FAAC9600ABB346 /* Auth */,
@@ -500,6 +550,7 @@
 				E2D9D01C28F72B5E004320CF /* Assets.xcassets in Resources */,
 				E2418A6F28FBE1A60076D344 /* PhotoCollectionViewCell.xib in Resources */,
 				E2E830F228FAAEE400ABB346 /* GoogleService-Info.plist in Resources */,
+				E22B25DE28FEB55C0082FC79 /* AccountViewController.xib in Resources */,
 				E251339328FAFE18001AD16F /* SearchViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -555,8 +606,11 @@
 			files = (
 				E251339228FAFE18001AD16F /* SearchViewController.swift in Sources */,
 				E274039D28F980EE003520D1 /* Photo.swift in Sources */,
+				E22B25DD28FEB55C0082FC79 /* AccountViewController.swift in Sources */,
+				E22B25D528FE95000082FC79 /* FirebaseFirestoreExtension.swift in Sources */,
 				E2D9D01328F72B5C004320CF /* AppDelegate.swift in Sources */,
 				E2E830ED28FAACC800ABB346 /* AuthViewController.swift in Sources */,
+				E22B25E028FEB96A0082FC79 /* AccountViewModel.swift in Sources */,
 				E28D000A28FDA7CE008564F6 /* Encodable+Extension.swift in Sources */,
 				E2418A6E28FBE1A60076D344 /* PhotoCollectionViewCell.swift in Sources */,
 				E251338D28FAF60F001AD16F /* MainTabbarViewController.swift in Sources */,
@@ -566,7 +620,9 @@
 				E28D000D28FDBED3008564F6 /* UserDefaultConstants.swift in Sources */,
 				E27403A428F9A4C8003520D1 /* PhotoTableViewCell.swift in Sources */,
 				E237AA9A28FACD6B000D5859 /* AuthViewModel.swift in Sources */,
+				E22B25D728FE95250082FC79 /* UserDefaultAccessible.swift in Sources */,
 				E237AAA028FAD151000D5859 /* CAViewController.swift in Sources */,
+				E22B25D328FE90E70082FC79 /* CAViewModel.swift in Sources */,
 				E297EA0E28F83AC900CAA90E /* PhotoListViewController.swift in Sources */,
 				E24352C328F893EB00AF384B /* PhotoListViewModel.swift in Sources */,
 				E28D000728FDA50F008564F6 /* User.swift in Sources */,
